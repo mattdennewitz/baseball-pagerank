@@ -25,7 +25,7 @@ def reject_url(url):
 @click.command()
 @click.option('-i', 'input_files', type=click.File('rb'), multiple=True)
 @click.option('-n', 'limit', type=click.INT, default=10)
-@click.option('--internal-link-weight', 'internal_weight', default=0.5,
+@click.option('-w', '--internal-link-weight', 'internal_weight', default=0.5,
               type=click.FLOAT,
               help='Weight for same-hostname links')
 def main(input_files, limit, internal_weight):

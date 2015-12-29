@@ -3,7 +3,6 @@ import re
 
 TERMS = [
     'wp-content/uploads',
-    '\.xlsx?',
     'plus.google.com',
     'facebook.com',
     'simplesharebuttons.com',
@@ -24,6 +23,8 @@ TERMS = [
     'mcfarlandpub.com',
     'itunes.apple.com',
     'baseballsavant.com',
+    'brooksbaseball.net',
+    '-chat-',
 
     # fangraphs
     'fangraphs.com/?$',
@@ -75,6 +76,6 @@ TERMS = [
 
 IGNORE = [
     re.compile(r'(' + r'|'.join(TERMS) + r')'),
-    re.compile(r'\.(jpe?g|png|gif)$'),
+    re.compile(r'\.(jpe?g|png|gif|xlsx?)$'),
     re.compile(r'mailto'),
 ]

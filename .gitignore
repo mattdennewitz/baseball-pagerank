@@ -61,3 +61,6 @@ data/*.json
 *~
 .DS_Store
 public_suffix_list.dat
+
+# Scrapy HTTP cache
+httpcache

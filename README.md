@@ -8,6 +8,22 @@ This is a young project - expect rough edges.
 Remember, too, that the goal is to surface interesting links,
 not become Google.
 
+## Spiders
+
+- [x] The Hardball Times and THT-Live
+- [x] Fangraphs, Rotographs, Community, and Fangraphs+ (not yet committed)
+- [x] Baseball Prospectus (with paywall support, not yet committed)
+- [ ] Grantland baseball coverage (RIP)
+- [ ] 538 baseball coverage
+- [ ] JABO (RIP)
+- [ ] Tangotiger (incl. comments)
+- [ ] Walk Like a Sabermetrician
+- [ ] Phil Birnbaum's Sabermetric Research blog
+
+... and more as they come up
+
+Sites with easily accessible blog post indexes are given priority.
+
 ## Implementation
 
 Data is collected by a suite of spiders, one per publisher.
@@ -44,3 +60,9 @@ representing a link from a publisher to itself. In-house content links
 are weighted to `0.5`, and this value is configurable at ranking runtime.
 
 Ideally, new weights will be added as the project matures.
+
+### URL pattern blacklist
+
+A small regex-based URL pattern blacklist is used to reduce noise like
+player card links, tweets, promotional Amazon links, FanDuel/DraftKings,
+and known dead sites. New filters can be added in `bbpr.patterns.TERMS`.

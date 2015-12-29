@@ -57,8 +57,7 @@ class BaseSpider(scrapy.Spider):
         self.logger.info('{} has {} urls'.format(src_url, len(links)))
 
         for href in links:
-            
-            # dest_url = urlparse.urljoin(src_url, href)
+            dest_url = urlparse.urljoin(src_url, href)
             dest_url = dest_url.encode('ascii', errors='ignore')
 
             try:

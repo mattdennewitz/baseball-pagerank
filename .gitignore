@@ -57,6 +57,7 @@ docs/_build/
 target/
 
 # Project-specific files
+local_settings.py
 data/*.json
 *~
 .DS_Store

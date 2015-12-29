@@ -14,13 +14,10 @@ USER_AGENT = 'bbpr (+http://github.com/mattdennewitz/baseball-pagerank)'
 
 CONCURRENT_REQUESTS = 16
 
-COOKIES_ENABLED=False
+COOKIES_ENABLED = True
+COOKIES_DEBUG = True
 
-AUTOTHROTTLE_ENABLED = True
-AUTOTHROTTLE_MAX_DELAY = 60
-
-HTTPCACHE_ENABLED=True
-HTTPCACHE_EXPIRATION_SECS=0
-HTTPCACHE_DIR='httpcache'
-HTTPCACHE_IGNORE_HTTP_CODES=[]
-HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
+try:
+    from local_settings import *
+except ImportError:
+    pass

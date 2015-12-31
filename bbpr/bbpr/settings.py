@@ -5,6 +5,10 @@ BOT_NAME = 'bbpr'
 SPIDER_MODULES = ['bbpr.spiders']
 NEWSPIDER_MODULE = 'bbpr.spiders'
 
+L_DIRECT = 'direct'
+L_RELATED = 'related'
+L_TERTIARY = 'tertiary'
+
 # publisher codes
 P_FG = 'fg'
 P_BPRO = 'bpro'

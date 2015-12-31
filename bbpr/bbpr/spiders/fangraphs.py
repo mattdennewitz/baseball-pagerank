@@ -114,19 +114,3 @@ class FangraphsSpider(BaseSpider):
             return value.strftime('%Y-%m-%d')
 
         return None
-
-        # links = response.css()
-
-        # for link in links.extract():
-        #     dest_url = urlparse.urljoin(response.url, link)
-
-        #     for pattern in settings.IGNORE:
-        #         if pattern.search(dest_url) is not None:
-        #             self.logger.debug('Skipping blacklisted URL: '
-        #                               + dest_url)
-        #             break
-        #     else:
-        #         self.logger.info('Found relationship: ' + dest_url)
-
-        #         # emit relationship
-        #         yield Link(src_url=response.url, dest_url=dest_url)

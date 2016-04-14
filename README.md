@@ -27,6 +27,20 @@ not become Google.
 
 Sites with easily accessible blog post indexes are given priority.
 
+### Running spiders
+
+```shell
+$ scrapy crawl <spider name> -o /path/to/<site-name>.json
+```
+
+### Ranking
+
+```shell
+$ ./rank.py -i /path/to/<site-name>.json [-i ...]
+```
+
+See `./rank.py --help` for more options.
+
 ## Implementation
 
 Data is collected by a suite of spiders, one per publisher.

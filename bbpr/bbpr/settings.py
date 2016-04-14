@@ -13,6 +13,7 @@ L_TERTIARY = 'tertiary'
 P_FG = 'fg'
 P_BPRO = 'bpro'
 P_THT = 'tht'
+P_538 = 'f38'
 
 USER_AGENT = 'bbpr (+http://github.com/mattdennewitz/baseball-pagerank)'
 

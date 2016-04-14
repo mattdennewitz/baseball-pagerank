@@ -72,6 +72,9 @@ TERMS = [
     'hardballtimes.com/main',
     'hardballtimes.com/thtstats/main'
     'hardballtimes.com/author',
+
+    # espn
+    'espnradio/podcast',
 ]
 
 IGNORE = [

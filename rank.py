@@ -1,10 +1,13 @@
+#!/usr/bin/env python
+
 import json
-import pprint
 import urlparse
+
+import click
 
 import networkx as nx
 
-import click
+import unicodecsv as csv
 
 from bbpr.bbpr.patterns import IGNORE
 
@@ -24,11 +27,13 @@ def reject_url(url):
 
 @click.command()
 @click.option('-i', 'input_files', type=click.File('rb'), multiple=True)
-@click.option('-n', 'limit', type=click.INT, default=10)
+@click.option('-n', 'limit', type=click.INT, default=10,
+              help='Number of results to display')
 @click.option('-w', '--internal-link-weight', 'internal_weight', default=0.5,
               type=click.FLOAT,
               help='Weight for same-hostname links')
-def main(input_files, limit, internal_weight):
+@click.argument('output', type=click.File('w'))
+def main(input_files, limit, internal_weight, output):
     graph = nx.DiGraph()
 
     for fh in input_files:
@@ -56,8 +61,15 @@ def main(input_files, limit, internal_weight):
     print('Calculating pagerank')
     pr = nx.pagerank_scipy(graph)
 
+    # sort nodes by centrality
     top_nodes = sorted(pr.items(), key=lambda p: p[1], reverse=True)[:limit]
-    pprint.pprint(top_nodes)
+
+    # create output
+    writer = csv.writer(output)
+    for node in top_nodes:
+        writer.writerow(node)
+
+    # pprint.pprint(top_nodes)
 
 
 if __name__ == '__main__':

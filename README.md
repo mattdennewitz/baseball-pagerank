@@ -13,8 +13,9 @@ not become Google.
 - [x] The Hardball Times and THT-Live
 - [x] Fangraphs, Rotographs, Community, and Fangraphs+ (not yet committed)
     - Requires Fangraphs account with FG+ access
-- [x] Baseball Prospectus (with paywall support, not yet committed)
+- [x] Baseball Prospectus (with paywall support)
     - Requires BP membership
+- [ ] Beyond the Box Score
 - [ ] Grantland baseball coverage (RIP)
 - [x] 538 baseball coverage
 - [ ] JABO (RIP)

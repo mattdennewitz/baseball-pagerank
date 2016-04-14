@@ -11,7 +11,7 @@ not become Google.
 ## Spiders
 
 - [x] The Hardball Times and THT-Live
-- [x] Fangraphs, Rotographs, Community, and Fangraphs+ (not yet committed)
+- [x] Fangraphs, FG+, Community
     - Requires Fangraphs account with FG+ access
 - [x] Baseball Prospectus (with paywall support)
     - Requires BP membership

@@ -16,7 +16,7 @@ not become Google.
 - [x] Baseball Prospectus (with paywall support, not yet committed)
     - Requires BP membership
 - [ ] Grantland baseball coverage (RIP)
-- [ ] 538 baseball coverage
+- [x] 538 baseball coverage
 - [ ] JABO (RIP)
 - [ ] Tangotiger (incl. comments)
 - [ ] Walk Like a Sabermetrician
